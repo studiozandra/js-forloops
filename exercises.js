@@ -60,6 +60,17 @@ function leaders(arr){
     
    }
    console.log(leaders(presidents));
+console.log(presidents.length);
+
+   function leaders(person){
+      for(var i = 0; i<person.length; i++){
+         console.log('President ' + person[i] + 'was a great leader.');
+      }
+
+
+   }
+console.log(leaders(presidents));
+
 
 /* 4) Line Number
 Declare a variable named `stringOfNumbers` and assign its value to an empty string. 
