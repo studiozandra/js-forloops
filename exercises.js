@@ -172,7 +172,7 @@ function nap(schedule){
    if(schedule[i] === true){
       console.log('Zzzzzz')
    }else{
-      console.log('gotta get coding')
+      console.log('gotta get coding') // don't use return here bc it will end the function, it won't continue looping
    }
    }
 
