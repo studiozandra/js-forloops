@@ -208,7 +208,19 @@ Declare a variable named `topQuote` and assign it to a String value of your favo
 Write a function that will iterate through the string value and return the longest word in that quote. Console.log your result.
 */
 
-
+var topQuote = "Do unto others as you would have them do unto you.";
+function longestWord(str){
+   var word = '';
+   var strToArr = str.split(' ');
+   for (i = 0; i < strToArr.length; i++){
+      //console.log(strToArr[i]);
+      if (strToArr[i].length > word.length){
+         word = strToArr[i];
+      }
+   }
+   return word;
+}
+console.log(longestWord(topQuote));
 
 /* 12) Puppet Master
 Declare a variable named `miscStorage` set it's value to be: `[ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ]`
@@ -218,8 +230,18 @@ Write a function named `generateArrayOfStrings` which takes a single argument `s
    @return Datatype: Array
 
 */
+var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ];
+function generateArrayOfStrings(storage){
+   var stringsOnlyStorage = [];
+   for (i = 0; i < storage.length; i++){
+      if (typeof storage[i] === 'string'){
+         stringsOnlyStorage.push(storage[i]);
+      }
+   }
+   return stringsOnlyStorage;
 
-
+}
+console.log(generateArrayOfStrings(miscStorage));
 
 /* 13) All Grown Up 
 Write a function that will capitalize the first letter in each word in the phrase below. The function will console.log the message: "I've Lived A Life That's Full. I've Traveled Each And Every Highway. But More, Much More Than This. I Did It My Way."  
