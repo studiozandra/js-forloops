@@ -272,8 +272,19 @@ Note, please use two for loops to complete this problem
 
 var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo", "Pyramids"],["Rome", "Colosseum"]];
 
-
-
+function tourSpots(arr){
+   var city = [];
+   var spot = [];
+   for (i =0; i< arr.length; i++){
+      city.push(arr[i][0]);
+   }
+      for (j = 0; j<arr.length; j++){
+         spot.push(arr[j][1]);
+      }
+   
+   return city + " --- " + spot; 
+}
+console.log(tourSpots(guide));
 /* 15) Back to School
 Declare a variable named `currentCohort` and set it's value to be this [array found here](https://gist.github.com/sgnl/e40879b2249e06ca7811).
 Write a function named `graduateAndSetNewClass`, which takes a single argument called `cohort`.
